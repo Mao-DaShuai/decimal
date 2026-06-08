@@ -1,5 +1,7 @@
 # Decimal - High-Precision Decimal Arithmetic Library for C
 
+> [中文版](README.zh-CN.md)
+
 A C library for arbitrary-precision decimal arithmetic, supporting addition, subtraction, multiplication, and conversion operations with exact decimal representation.
 
 ## Features
