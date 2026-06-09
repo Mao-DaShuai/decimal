@@ -27,15 +27,23 @@ int main() {
     double PI;
     int scale;
     decimal_t *d3 = decimal_alloc_double(3.1415926535);
+    decimal_t *d4 = decimal_alloc_double(3.1415926535);
     if (!(scale = decimal_to_double(d3, &PI))) {
         printf("获取失败!\n");
     }
     printf("PI = %.*f\n", scale, PI);
     printf("scale = %d\n", scale);
 
+    if (decimal_compare(d3, d4)) {
+        printf("no same\n");
+    } else {
+        printf("same\n");
+    }
+
     decimal_free(d);
     decimal_free(d2);
     decimal_free(d3);
+    decimal_free(d4);
 
     return 0;
 }

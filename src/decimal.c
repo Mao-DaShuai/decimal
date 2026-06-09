@@ -650,7 +650,20 @@ void inline decimal_free(decimal_t *d)
 }
 
 
-int decimal_compare(decimal_t *a, decimal_t *b);
+/**
+ * @brief 比较两个decimal_t实例的大小。
+ * @param a decimal_t实例一。
+ * @param b decimal_t实例二。
+ * @return 返回0：等于，1：不等于。
+ */
+int decimal_compare(decimal_t *a, decimal_t *b)
+{
+    if (!a || !b) return 1;
+
+    if (a->sign == b->sign && !strcmp(a->value, b->value)) return 0;
+
+    return 1;
+}
 
 
 /**
